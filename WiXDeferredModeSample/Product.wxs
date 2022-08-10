@@ -4,7 +4,7 @@
     <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
     <MediaTemplate EmbedCab="yes" />
 
-    <!-- Diabled main GUI (custom action GUI will show), just un-comment to enable MSI GUI sequence -->
+    <!-- Disable main MSI GUI sequence by commenting out next line (custom action GUI will show) -->
     <UIRef Id="WixUI_Mondo" />
 
     <!-- Declare property with value -->
