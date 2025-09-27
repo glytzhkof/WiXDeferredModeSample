@@ -1,42 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="WiXDeferredModeSample" Language="1033" Version="1.0.0.0" Manufacturer="-" UpgradeCode="ae03fe71-1608-4f27-aa2f-fa70c32de067">
-    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
-    <MediaTemplate EmbedCab="yes" />
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui">
+	<Package Name="WiXDeferredModeSample" Language="1033" Version="1.0.0.0" Manufacturer="-" UpgradeCode="ae03fe71-1608-4f27-aa2f-fa70c32de067" InstallerVersion="200"><MediaTemplate EmbedCab="yes" />
 
     <!-- Diabled main GUI (custom action GUI will show), just un-comment to enable MSI GUI sequence -->
-    <UIRef Id="WixUI_Mondo" />
+    <ui:WixUI Id="WixUI_Mondo" />
 
     <!-- Declare property with value -->
-    <Property Id="MYPROPERTY" Hidden="yes" Secure="yes">We will send this text to deferred mode</Property>
+    <Property Id="MYPROPERTY" Hidden="yes" Secure="yes" Value="We will send this text to deferred mode" />
 
     <!-- Type 51 CA: Send value of MYPROPERTY to the deferred mode CA named MyAction -->
     <CustomAction Id="SetProperty" Return="check" Property="ReadProperyDeferred" Value="[MYPROPERTY]" />
 
     <!-- C#, make sure it is deferred! -->
-    <Binary Id="CustomActions" SourceFile="$(var.CustomActionSample.TargetDir)$(var.CustomActionSample.TargetName).CA.dll" />
-    <CustomAction Id="ReadProperyDeferred" HideTarget="yes" BinaryKey="CustomActions" Execute="deferred" DllEntry="TestCustomAction" />
+    <Binary Id="CustomActions" SourceFile="$(var.CustomActionSample2.TargetDir)$(var.CustomActionSample2.TargetName).CA.dll" />
+    <CustomAction Id="ReadProperyDeferred" HideTarget="yes" Execute="deferred" DllEntry="MyCustomAction" BinaryRef="CustomActions" />
 
     <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
 
     <Feature Id="ProductFeature" Title="ProjectPaths" Level="1" />
 
     <InstallExecuteSequence>
-      <Custom Action='SetProperty' Before='InstallInitialize'></Custom>
-      <Custom Action='ReadProperyDeferred' Before='InstallFinalize'></Custom>
+      <Custom Action="SetProperty" Before="InstallInitialize"></Custom>
+      <Custom Action="ReadProperyDeferred" Before="InstallFinalize"></Custom>
     </InstallExecuteSequence>
-
-    <Directory Id="TARGETDIR" Name="SourceDir">
-      <Directory Id="ProgramFilesFolder">
+		
+      <StandardDirectory Id="ProgramFilesFolder">
         <Directory Id="INSTALLFOLDER" Name="Test Folder">
 
           <Component Feature="ProductFeature">
-            <File Source="$(env.SystemRoot)\notepad.exe" />
+            <File Id="notepad.exe" Source="$(env.SystemRoot)\notepad.exe" />
           </Component>
 
         </Directory>
-      </Directory>
-    </Directory>
-
-  </Product>
+      </StandardDirectory>
+    </Package>
 </Wix>

@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30804.86
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomActionSample", "CustomActionSample\CustomActionSample.csproj", "{0EAC68F7-36D0-4837-8DA3-8E3E6C39991F}"
+Project("{B7DD6F7E-DEF8-4E67-B5B7-07EF123DB6F0}") = "WiXDeferredModeSample", "WiXDeferredModeSample\WiXDeferredModeSample.wixproj", "{353199B0-646F-43DE-9F0C-5B5F56200F47}"
 EndProject
-Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "WiXDeferredModeSample", "WiXDeferredModeSample\WiXDeferredModeSample.wixproj", "{353199B0-646F-43DE-9F0C-5B5F56200F47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomActionSample2", "CustomAction1\CustomActionSample2.csproj", "{0AEAB8A2-8C9B-4545-B688-84C000D8F5E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0EAC68F7-36D0-4837-8DA3-8E3E6C39991F}.Debug|x86.ActiveCfg = Debug|x86
-		{0EAC68F7-36D0-4837-8DA3-8E3E6C39991F}.Debug|x86.Build.0 = Debug|x86
-		{0EAC68F7-36D0-4837-8DA3-8E3E6C39991F}.Release|x86.ActiveCfg = Release|x86
-		{0EAC68F7-36D0-4837-8DA3-8E3E6C39991F}.Release|x86.Build.0 = Release|x86
 		{353199B0-646F-43DE-9F0C-5B5F56200F47}.Debug|x86.ActiveCfg = Debug|x86
 		{353199B0-646F-43DE-9F0C-5B5F56200F47}.Debug|x86.Build.0 = Debug|x86
 		{353199B0-646F-43DE-9F0C-5B5F56200F47}.Release|x86.ActiveCfg = Release|x86
 		{353199B0-646F-43DE-9F0C-5B5F56200F47}.Release|x86.Build.0 = Release|x86
+		{0AEAB8A2-8C9B-4545-B688-84C000D8F5E1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0AEAB8A2-8C9B-4545-B688-84C000D8F5E1}.Debug|x86.Build.0 = Debug|Any CPU
+		{0AEAB8A2-8C9B-4545-B688-84C000D8F5E1}.Release|x86.ActiveCfg = Release|Any CPU
+		{0AEAB8A2-8C9B-4545-B688-84C000D8F5E1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
