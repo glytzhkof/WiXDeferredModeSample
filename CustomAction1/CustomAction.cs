@@ -4,7 +4,7 @@ using System.Linq;
 using WixToolset.Dtf.WindowsInstaller;
 using System.Windows.Forms;
 
-namespace CustomAction1
+namespace CustomActionSample2
 {
     public class CustomActions
     {
