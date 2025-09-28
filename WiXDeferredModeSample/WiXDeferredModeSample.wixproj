@@ -3,10 +3,10 @@
     <DefineConstants>Debug</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CustomAction1\CustomActionSample2.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="WixToolset.Util.wixext" Version="6.0.2" />
     <PackageReference Include="WixToolset.UI.wixext" Version="6.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomActionSample2\CustomActionSample2.csproj" />
   </ItemGroup>
 </Project>

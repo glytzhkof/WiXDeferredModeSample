@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36518.9 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{B7DD6F7E-DEF8-4E67-B5B7-07EF123DB6F0}") = "WiXDeferredModeSample", "WiXDeferredModeSample\WiXDeferredModeSample.wixproj", "{353199B0-646F-43DE-9F0C-5B5F56200F47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomActionSample2", "CustomAction1\CustomActionSample2.csproj", "{0AEAB8A2-8C9B-4545-B688-84C000D8F5E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomActionSample2", "CustomActionSample2\CustomActionSample2.csproj", "{0AEAB8A2-8C9B-4545-B688-84C000D8F5E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
